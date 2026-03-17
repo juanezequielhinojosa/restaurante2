@@ -31,11 +31,6 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            overflow-x: hidden;
-        }
-
         body {
             font-family: 'Lato', sans-serif;
             background-color: var(--bg-main);
@@ -357,14 +352,6 @@
             .menu-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            @media (max-width: 992px) {
-                .contact-form {
-                    width: 100%;
-                    max-width: 500px;
-                    margin: 0 auto;
-                }
-            }
         }
 
         @media (max-width: 600px) {
@@ -659,6 +646,59 @@
             transform: translateY(-3px);
         }
 
+        .footer-copyright {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        .section-tag {
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .history-extra-margin {
+            margin-top: 20px;
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 20px;
+            color: var(--accent);
+        }
+
+        .contact-label {
+            color: var(--text-primary);
+        }
+
+        .testimonial-star {
+            width: 16px;
+            fill: currentColor;
+        }
+
         /* Responsive */
         @media (max-width: 1100px) {
             .hero-text-organic h1 {
@@ -672,18 +712,14 @@
         }
 
         @media (max-width: 992px) {
-
-            .hero-container-organic,
-            .history-container,
-            .contact-container {
+            .hero-container-organic {
                 grid-template-columns: 1fr;
                 display: flex;
                 flex-direction: column;
                 text-align: center;
             }
 
-            .hero-visual-organic,
-            .history-img {
+            .hero-visual-organic {
                 justify-content: center;
                 margin-top: 50px;
             }
@@ -696,11 +732,6 @@
 
             .hero-text-organic h1 span {
                 margin-left: 0;
-            }
-
-            .contact-info {
-                text-align: left;
-                margin-top: 50px;
             }
         }
 
@@ -733,6 +764,48 @@
 
             .hero-text-organic h1 {
                 font-size: 3rem;
+            }
+
+            /* Contact Responsive */
+            .contact-container {
+                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-form {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .contact-info {
+                margin-top: 50px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info p {
+                justify-content: center !important;
+                width: 100%;
+            }
+
+            .map-container {
+                max-width: 500px;
+            }
+
+            /* History Responsive */
+            .history-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .history-img {
+                justify-content: center;
             }
         }
 
@@ -794,7 +867,7 @@
         <!-- Menu Section -->
         <section class="menu" id="menu">
             <div class="section-title">
-                <span class="hero-tag" style="margin-bottom: 10px; display: inline-block;">Experiencia Culinaria</span>
+                <span class="hero-tag section-tag">Experiencia Culinaria</span>
                 <h2>Nuestra Selección</h2>
             </div>
             <div class="menu-grid">
@@ -894,7 +967,7 @@
         <!-- History Section -->
         <section class="history" id="history">
             <div class="section-title">
-                <span class="hero-tag" style="margin-bottom: 10px; display: inline-block;">Desde 1995</span>
+                <span class="hero-tag section-tag">Desde 1995</span>
                 <h2>Nuestra Historia</h2>
             </div>
             <div class="history-container">
@@ -902,8 +975,8 @@
                     <p>Fundado en 1995, L'Essence nació con la visión de elevar la gastronomía local a niveles
                         internacionales. Cada ingrediente es seleccionado cuidadosamente de productores locales para
                         garantizar la frescura y el sabor auténtico.</p>
-                    <p style="margin-top: 20px">Nuestra cocina es un laboratorio de sensaciones donde la tradición se
-                        encuentra con la vanguardia, creando platos que no solo alimentan, sino que cuentan una
+                    <p class="history-extra-margin">Nuestra cocina es un laboratorio de sensaciones donde la tradición
+                        se encuentra con la vanguardia, creando platos que no solo alimentan, sino que cuentan una
                         historia.</p>
                 </div>
                 <div class="history-img">
@@ -916,7 +989,7 @@
         <!-- Gallery Section -->
         <section class="gallery" id="gallery">
             <div class="section-title">
-                <span class="hero-tag" style="margin-bottom: 10px; display: inline-block;">Ambiente & Diseño</span>
+                <span class="hero-tag section-tag">Ambiente & Diseño</span>
                 <h2>Galería L'Essence</h2>
             </div>
             <div class="gallery-grid">
@@ -950,7 +1023,7 @@
         <!-- Contact Section -->
         <section class="contact" id="contact">
             <div class="section-title">
-                <span class="hero-tag" style="margin-bottom: 10px; display: inline-block;">Estamos para servirle</span>
+                <span class="hero-tag section-tag">Estamos para servirle</span>
                 <h2>Contacto</h2>
             </div>
             <div class="contact-container">
@@ -970,22 +1043,20 @@
                     <button type="submit" class="btn">Enviar Mensaje</button>
                 </form>
                 <div class="contact-info">
-                    <h3
-                        style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 25px; color: var(--text-primary); text-align: center;">
-                        Visítanos</h3>
-                    <div style="margin-bottom: 30px; color: var(--text-secondary);">
-                        <p style="margin-bottom: 15px; display: flex; align-items: center; gap: 12px;">
-                            <i data-lucide="map-pin" style="width: 20px; color: var(--accent);"></i>
-                            <span><strong style="color: var(--text-primary);">Dirección:</strong> Calle Gourmet 123,
-                                Ciudad de Sabores</span>
+                    <h3 class="contact-title">Visítanos</h3>
+                    <div class="contact-details">
+                        <p class="contact-item">
+                            <i data-lucide="map-pin" class="contact-icon"></i>
+                            <span><strong class="contact-label">Dirección:</strong> Calle Gourmet 123, Ciudad de
+                                Sabores</span>
                         </p>
-                        <p style="margin-bottom: 15px; display: flex; align-items: center; gap: 12px;">
-                            <i data-lucide="phone" style="width: 20px; color: var(--accent);"></i>
-                            <span><strong style="color: var(--text-primary);">Teléfono:</strong> +1 234 567 890</span>
+                        <p class="contact-item">
+                            <i data-lucide="phone" class="contact-icon"></i>
+                            <span><strong class="contact-label">Teléfono:</strong> +1 234 567 890</span>
                         </p>
-                        <p style="display: flex; align-items: center; gap: 12px;">
-                            <i data-lucide="mail" style="width: 20px; color: var(--accent);"></i>
-                            <span><strong style="color: var(--text-primary);">Email:</strong> info@lessence.com</span>
+                        <p class="contact-item">
+                            <i data-lucide="mail" class="contact-icon"></i>
+                            <span><strong class="contact-label">Email:</strong> info@lessence.com</span>
                         </p>
                     </div>
 
@@ -1001,7 +1072,7 @@
         <!-- Testimonials Section -->
         <section class="testimonials" id="testimonials">
             <div class="section-title">
-                <span class="hero-tag" style="margin-bottom: 10px; display: inline-block;">Opiniones</span>
+                <span class="hero-tag section-tag">Opiniones</span>
                 <h2>Lo que dicen nuestros clientes</h2>
             </div>
             <div class="testimonials-container">
@@ -1009,11 +1080,11 @@
                     <!-- Testimonial 1 -->
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
                         </div>
                         <p class="testimonial-content">"Una experiencia sensorial inigualable. El risotto de trufa es,
                             sin duda, el mejor que he probado en mi vida. El ambiente es íntimo y sofisticado."</p>
@@ -1030,11 +1101,11 @@
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
                         </div>
                         <p class="testimonial-content">"L'Essence es nuestro lugar favorito para celebraciones
                             especiales. La atención al detalle y la calidad de los ingredientes orgánicos se nota en
@@ -1052,11 +1123,11 @@
                     <!-- Testimonial 3 -->
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
                         </div>
                         <p class="testimonial-content">"El menú degustación es una obra de arte. Cada plato cuenta una
                             historia diferente. Maridaje perfecto y un servicio impecable."</p>
@@ -1073,11 +1144,11 @@
                     <!-- Testimonial 4 -->
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
                         </div>
                         <p class="testimonial-content">"Increíble cómo logran fusionar técnicas modernas con sabores tan
                             tradicionales. El salmón ahumado es simplemente espectacular."</p>
@@ -1094,11 +1165,11 @@
                     <!-- Duplicate for infinite scroll -->
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
                         </div>
                         <p class="testimonial-content">"Una experiencia sensorial inigualable. El risotto de trufa es,
                             sin duda, el mejor que he probado en mi vida. El ambiente es íntimo y sofisticado."</p>
@@ -1114,11 +1185,11 @@
 
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
                         </div>
                         <p class="testimonial-content">"L'Essence es nuestro lugar favorito para celebraciones
                             especiales. La atención al detalle y la calidad de los ingredientes orgánicos se nota en
@@ -1135,11 +1206,11 @@
 
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
                         </div>
                         <p class="testimonial-content">"El menú degustación es una obra de arte. Cada plato cuenta una
                             historia diferente. Maridaje perfecto y un servicio impecable."</p>
@@ -1155,11 +1226,11 @@
 
                     <div class="testimonial-card">
                         <div class="testimonial-stars">
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
-                            <i data-lucide="star" style="width: 16px; fill: currentColor;"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
+                            <i data-lucide="star" class="testimonial-star"></i>
                         </div>
                         <p class="testimonial-content">"Increíble cómo logran fusionar técnicas modernas con sabores tan
                             tradicionales. El salmón ahumado es simplemente espectacular."</p>
@@ -1190,7 +1261,7 @@
                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
                 <a href="#"><i class="fa-brands fa-tiktok"></i></a>
             </div>
-            <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.5">
+            <p class="footer-copyright">
                 © 2026 L'Essence Gourmet. Todos los derechos reservados.
             </p>
         </footer>
